@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;calculadora/src/cargarNumb&apos;" deleteContents="false" description="Delete resource &apos;calculadora/src/cargarNumb&apos;" element1="/calculadora/src/cargarNumb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1567720324696"/>&#x0A;<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/calculadora/src/cargarFunciones.c" element2="/calculadora/src/cargarFunciones.h" element3="/calculadora/src/cargarNumero.c" element4="/calculadora/src/cargarNumero.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1567722785125"/>
+</session>

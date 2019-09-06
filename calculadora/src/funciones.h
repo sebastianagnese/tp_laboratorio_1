@@ -1,0 +1,18 @@
+/*
+ * funciones.h
+ *
+ *  Created on: 5 sep. 2019
+ *      Author: alumno
+ */
+
+#ifndef FUNCIONES_H_
+#define FUNCIONES_H_
+
+int cargarNumero (int *numero);
+int funcSumar(int NumA, int NumB, int *resultado);
+int funcRestar(int NumA, int NumB, int *resultado);
+int funcMultiplicar(int NumA, int NumB, int *resultado);
+int funcDividir(int NumA, int NumB, int *resultado);
+int funcFactorear(int numA, int *resultado);
+
+#endif /* FUNCIONES_H_ */

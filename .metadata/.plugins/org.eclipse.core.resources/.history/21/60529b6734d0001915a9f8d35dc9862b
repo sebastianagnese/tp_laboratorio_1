@@ -1,0 +1,204 @@
+/*
+ ============================================================================
+ Name        : calculadora.c
+ Author      : Agnese
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdio_ext.h>
+#include <stdlib.h>
+#define MSG_PRINT
+
+int cargarFunciones();
+int cargarNumero (int *numero);
+int funcSumar(int NumA, int NumB, int *resultado);
+int funcRestar(int NumA, int NumB, int *resultado);
+int funcMultiplicar(int NumA, int NumB, int *resultado);
+int funcDividir(int NumA, int NumB, int *resultado);
+int funcFactorear(int numA, int *resultado);
+
+int main()
+	{
+	int a;
+	int b;
+
+	cargarFunciones(a, b);
+
+	return 0;
+	}
+
+
+
+int cargarFunciones(int numA, int numB)
+{
+
+	int funcion;
+	int resultSuma=0;
+	int resultResta=0;
+	int resultProducto=0;
+	int resultDivision;
+	int resultFactoreoA=0;
+	int resultFactoreoB=0;
+
+	cargarNumero (&numA);
+	cargarNumero (&numB);
+
+	printf("\nLos valores ingresados son %d y %d",numA,numB);
+	printf("\nLista de operaciones\n1: Suma\n2: Resta");
+	printf("\n3: Multiplicacion\n4: Division\n5: Factorizacion");
+	printf("\nIngrese una opcion: ");
+	scanf("%d",&funcion);
+
+	funcSumar(numA, numB, &resultSuma);
+	funcRestar(numA, numB, &resultResta);
+	funcMultiplicar(numA, numB, &resultProducto);
+	funcDividir(numA, numB, &resultDivision);
+	funcFactorear(numA, &resultFactoreoA);
+	printf("Test: %d",resultFactoreoA);
+	funcFactorear(numB, &resultFactoreoB);
+	printf("Test: %d",resultFactoreoB);
+
+	switch (funcion)
+	{
+		case 1:
+			printf("El resultado de la suma es: %d",resultSuma);
+			break;
+
+		case 2:
+			printf("El resultado de la resta es: %d",resultResta);
+			break;
+
+		case 3:
+			printf("El resultado de la multiplicacion es: %d",resultProducto);
+			break;
+
+		case 4:
+			printf("El resultado de la division es: %d",resultDivision);
+			break;
+
+		case 5:
+			printf("El primer valor factorizado es: %d",resultFactoreoA);
+			printf("El segundo valor factorizado es: %d",resultFactoreoB);
+			break;
+
+	}
+	return 0;
+}
+
+
+
+
+int cargarNumero (int *numero)
+{
+	int retorno = -1;
+	printf("Ingrese un valor: ");
+	scanf ("%d",numero);
+
+	if (numero != '\0')
+	{
+		retorno = 0;
+	}
+
+	return 0;
+}
+
+
+
+int funcSumar(int numA, int numB, int *resultado)
+{
+	int retorno = -1;
+
+	if(numA != '\0' && numB != '\0')
+
+	{
+		*resultado = numA + numB;
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int funcRestar(int numA, int numB, int *resultado)
+{
+	int retorno = -1;
+
+	if(numA != '\0' && numB != '\0')
+    {
+		*resultado = numA - numB;
+		retorno = 0;
+    }
+
+	return retorno;
+}
+
+int funcMultiplicar(int numA, int numB, int *resultado)
+{
+	int retorno = -1;
+
+    if(numA != '\0' && numB != '\0')
+    {
+
+    	*resultado = numA * numB;
+    	retorno = 0;
+    }
+
+    return retorno;
+}
+
+int funcDividir(int numA, int numB, int *resultado)
+{
+	int retorno = -1;
+
+	if(numB == 0)
+	{
+		retorno = -2;
+    }
+    else if(numA != '\0' && numB != '\0' && numB != 0)
+    {
+    	*resultado = numA / numB;
+    	retorno = 0;
+    }
+
+	return retorno;
+}
+
+int funcFactorear(int numero, int *resultado)
+{
+	int i;
+	int acumulador=0;
+	int factoreo;
+    int retorno = -1;
+    printf("test numero: %d resultado: %d",numero,*resultado);
+
+    if(numero > 0)
+    {
+
+    	for(i=1; i<numero; i++)
+    	{
+    		printf("Muestro i: %d numero %d",i,numero)
+    		acumulador = numero * i;
+    		factoreo = factoreo + acumulador;
+
+    	}
+    	*resultado = factoreo;
+    	retorno = 0;
+    }
+    //printf("test %d %d",factoreo,*resultado);
+    return retorno;
+}
+
+
+
+
+
+
+
+
+
+
+
+

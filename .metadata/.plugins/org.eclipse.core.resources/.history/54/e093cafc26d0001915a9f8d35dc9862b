@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : calculadora.c
+ Author      : Agnese
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	puts("0"); /* prints 0 */
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,60 @@
+/*
+ ============================================================================
+ Name        : calculadora.c
+ Author      : Agnese
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdio_ext.h>
+#include <stdlib.h>
+#define MSG_PRINT
+
+int cargarFunciones();
+int cargarNumero (int *numero);
+
+int main()
+	{
+	int a=0;
+	int b=0;
+
+	cargarFunciones(a, b);
+
+	return 0;
+	}
+
+
+
+
+
+
+int cargarNumero (int *numero)
+{
+	int retorno = -1;
+	printf("Ingrese un valor: ");
+	scanf ("%d",numero);
+
+	if (numero != '\0')
+	{
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
